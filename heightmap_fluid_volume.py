@@ -141,7 +141,7 @@ def volume(heightmap_):
             actual_volume_added = heightmap.volume_added
         else:
             for point in contiguous_points:
-                heightmap.data[point.line][point.col].max_height_obtained= True
+                point.max_height_obtained = True
             if heightmap.get_bottom_point() is None:
                 continue_loop = False
     heightmap.display()
